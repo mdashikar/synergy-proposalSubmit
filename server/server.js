@@ -12,14 +12,14 @@ var {ProjectSubmit} = require('./models/projectSubmission');
 var {authenticate} = require('./middleware/authenticate');
 var {ObjectID} = require('mongodb');
 
-
+app.set( 'port', ( process.env.PORT || 5000 ));
 var app = express();
 app.set('views', path.join(__dirname, '/../views'));
 app.set('view engine', 'hbs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const port = process.env.PORT;
+//const port = process.env.PORT;
 
 app.post('/', (req, res) => {
   
@@ -124,8 +124,11 @@ app.post('/', (req, res) => {
 
 
  
-app.listen(port, () => {
-    console.log(`Started on port: ${port}`);
+// app.listen(port, () => {
+//     console.log(`Started on port: ${port}`);
+// });
+app.listen( app.get( 'port' ), function() {
+    console.log( 'Node server is running on port ' + app.get( 'port' ));
 });
 
 module.exports = {app};
