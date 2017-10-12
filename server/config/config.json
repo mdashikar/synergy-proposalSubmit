@@ -1,0 +1,12 @@
+{
+    "test": {
+        "PORT": 3000,
+        "MONGODB_URI":"mongodb://localhost:27017/SynergyTest",
+        "JWT_SECRET": "asdkjlaksjdlaks$%^#@jd3902049(#3265"
+    },
+    "development":{
+        "PORT": 3000,
+        "MONGODB_URI":"mongodb://localhost:27017/Synergy",
+        "JWT_SECRET": "*#0askdkb,pqoier'a.$%^#@jd3902049(#3265"
+    }
+}
